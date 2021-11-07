@@ -175,13 +175,14 @@ public class MainActivity extends AppCompatActivity {
                 if (!current.equals("0")) {
                     if (current.substring(0, 1).equals("-")) current = current.substring(1, current.length());
                     else current = "-" + current;
+                    displayCal();
                 }
                 if (operator_last == true) {
-                    if (res_past.substring(0, 1).equals("-")) current = res_past.substring(1, res_past.length());
-                    else current = "-" + res_past;
-                    operator_last = false;
+                    if (res_past.substring(0, 1).equals("-")) res_past = res_past.substring(1, res_past.length());
+                    else res_past = "-" + res_past;
+                    displayPastRes();
                 }
-                displayCal();
+
             }
         });
         btndiv.setOnClickListener(new View.OnClickListener() {
